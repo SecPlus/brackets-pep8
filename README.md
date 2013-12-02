@@ -19,6 +19,7 @@ This extension add pep8 style guide check for python projects.
 == Dependencies ==
 
 * pep8
+    
     sudo pip install pep8 --upgrade
 
 After installed, simple use Ctrl+Shift+P or View->PEP8 Lint on your python code.
