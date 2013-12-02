@@ -1,8 +1,8 @@
 {
-    "name": "python-pep8",
+    "name": "brackets-pep8",
     "title": "Python pep8 Lint",
     "description": "This extensio enables run the pep8 linter to document",
-    "homepage": "https://github.com/SecPlus/python-pep8", // URL for your project
+    "homepage": "https://github.com/SecPlus/brackets-pep8",
     "version": "1.0.0",
     "author": "Tiago Natel de Moura",
     "license": "MIT",
