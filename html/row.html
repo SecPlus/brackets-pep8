@@ -1,0 +1,14 @@
+{{#resultObj}}
+        <tr data-file="{{path}}">
+            <th>Line</th>
+            <th>Column</th>
+            <th>Message</th>
+        </tr>
+        {{#result}}
+                <tr class="comment" data-file="{{filename}}" data-line="{{line}}" data-char="{{column}}">
+                        <td class="line">{{line}}</td>
+                        <td class="char">{{column}}</td>
+                        <td class="message">{{message}}</td>
+                </tr>
+        {{/result}}
+{{/resultObj}}

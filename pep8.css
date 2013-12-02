@@ -1,0 +1,23 @@
+.brackets-pep8 table {
+        width: 100%;
+        position: relative;
+}
+
+/*--- TABLE ROWS ---*/
+.brackets-pep8 .message {
+    text-align: left;
+    width: 90%;
+}
+
+.brackets-pep8 td {
+    width: auto;
+}
+
+/*--- TOOLBAR ---*/
+#brackets-pep8-icon {
+        background-image: url( 'images/pep8-icon.svg' );
+}
+
+#brackets-pep8-icon.active {
+        background-position: 0 -24px;
+}
