@@ -3,7 +3,7 @@
     "title": "Python pep8 Lint",
     "description": "This extension enables the pep8 style guide checker for python code. Required pep8 (sudo pip install pep8).",
     "homepage": "https://github.com/SecPlus/brackets-pep8",
-    "version": "1.1.0",
+    "version": "1.2.0",
     "author": "Tiago Natel de Moura",
     "license": "MIT",
     "engines": {
