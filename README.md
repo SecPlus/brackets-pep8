@@ -1,6 +1,6 @@
 #Brackets-PEP8
 
-This extension add pep8 style guide check to python projects.
+This extension add pep8 style guide check for python projects.
 
 ##Install from URL
 
