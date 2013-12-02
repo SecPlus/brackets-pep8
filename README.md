@@ -1,6 +1,6 @@
-#Brackets Extension Template
+#Brackets-PEP8
 
-This is a sample README file for a Brackets extensions.
+This extension add pep8 style guide check to python projects.
 
 ##Install from URL
 
@@ -16,3 +16,14 @@ This is a sample README file for a Brackets extensions.
 
 ##Instructions
 
+== Dependencies ==
+
+* pep8
+    sudo pip install pep8 --upgrade
+
+After installed, simple use Ctrl+Shift+P or View->PEP8 Lint on your python code.
+If doesn't works, find the path of pep8 on your system and edit the file
+~/.config/Brackets/extensions/user/brackets-pep8/defaultPreferences.js and set
+pep8Path accordingly.
+
+;)
