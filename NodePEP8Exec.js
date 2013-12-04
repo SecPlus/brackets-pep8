@@ -22,6 +22,9 @@
                 /* Python OK */
                 domainManager.emitEvent("pep8", "update", JSON.stringify(resultObj));
                 return;
+            } else if (childproc.exitCode === 127) {
+                domainManager.emitEvent("pep8", "error", JSON.stringify(resultObj));
+                return;
             }
 
             var lines = stdout.split("\n");
@@ -73,6 +76,12 @@
         domainManager.registerEvent(
             "pep8",
             "update",
+            ["data"]
+        );
+        
+        domainManager.registerEvent(
+            "pep8",
+            "error",
             ["data"]
         );
     }

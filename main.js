@@ -57,8 +57,6 @@ define(function (require, exports, module) {
         var currentDoc = document;
         var currentFile = currentDoc.file.fullPath;
 
-        console.log("Executing Command pep8 on '" + currentFile + "'");
-
         nodeConnection.domains.pep8.pep8(getPEP8Binary(),
                                          currentFile)
             .fail(function (err) {
@@ -69,7 +67,7 @@ define(function (require, exports, module) {
                     "Error when executing pep8 lint: " + err.toString()
                 );
             }).done(function (ret) {
-                console.log(ret);
+                /* nothing for now */
             });
     }
 
@@ -191,14 +189,15 @@ define(function (require, exports, module) {
 
         $(nodeConnection).on("pep8.update", function (evt, jsondata) {
             var resultObj = JSON.parse(jsondata),
-                results = resultObj.result;
+                results = resultObj.result,
+                dlg;
 
             if (resultObj.exitcode === 0 ||
                     results.length === 0) {
                 $pep8Panel.find('.table-container').empty();
                 return;
             }
-
+            
             var resultsHTML = Mustache.render(pep8ResultsTemplate, {
                 results: rowTemplate(resultObj)
             });
@@ -211,6 +210,14 @@ define(function (require, exports, module) {
             $pep8Panel.find('.table-container').empty().append(resultsHTML);
 
             Resizer.show($pep8Panel);
+        });
+        
+        $(nodeConnection).on("pep8.error", function (evt, jsondata) {
+            var dlg = Dialogs.showModalDialog(
+                    Dialogs.DIALOG_ID_ERROR,
+                    "PEP8 Error",
+                    "pep8 not found. Run sudo pip install pep8"
+                );
         });
 
         chain(connect, loadNodePEP8Exec);
