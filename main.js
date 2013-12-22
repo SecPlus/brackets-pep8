@@ -170,8 +170,12 @@ define(function (require, exports, module) {
             }
         }).on('currentDocumentChange', function (event) {
             var doc = DocumentManager.getCurrentDocument();
+            if (!doc || !doc.language) {
+                hidePEP8();
+            }
+            
             if (CommandManager.get(COMMAND_ID).getChecked() === true) {
-                if (doc.language.getId() === "python") {
+                if (doc && doc.language && doc.language.getId() === "python") {
                     enablePEP8(true);
                 } else {
                     hidePEP8();
