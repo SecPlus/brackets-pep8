@@ -154,7 +154,7 @@ define(function (require, exports, module) {
         $pep8Panel.on('click', '.comment', function (e) {
             var $this = $(this);
             // Set cursor position at start of todo.
-            EditorManager.getCurrentFullEditor().setCursorPos($this.data('line') - 1, $this.data('char'));
+            EditorManager.getCurrentFullEditor().setCursorPos($this.data('line') - 1, $this.data('char') - 1);
             // Set focus on editor.
             EditorManager.focusEditor();
         }).on('click', '.close', function () {
