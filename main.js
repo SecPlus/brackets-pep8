@@ -49,7 +49,7 @@ define(function (require, exports, module) {
         if (preferences.getValue("pep8IsInSystemPath")) {
             return "pep8";
         } else {
-            return preferences.getValue("pep8Path");
+            return DefaultPreferences.pep8Path;
         }
     }
 
@@ -145,7 +145,7 @@ define(function (require, exports, module) {
             return loadPromise;
         }
 
-        var pep8HTML = Mustache.render(pep8PanelTemplate, {pep8: "/usr/local/bin/pep8"}),
+        var pep8HTML = Mustache.render(pep8PanelTemplate, {pep8: DefaultPreferences.pep8Path}),
             pep8Panel = PanelManager.createBottomPanel('tiago4orion.bracketsPEP8.panel', $(pep8HTML), 100);
 
         // Cache todo panel.
