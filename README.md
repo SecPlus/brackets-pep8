@@ -1,6 +1,6 @@
 #Brackets-PEP8 (Deprecated)
 
-**This extension uses a deprecated API of brackets 1.0. It does not work anymore in recent "brackets" versions, and the author don't use "brackets" as an editor anymore to fix that. Feel free to fork and fix the current problems or stop using it.**
+**This extension uses a deprecated API of brackets 1.0. It does not work anymore in recent brackets versions, and the author don't use brackets as an editor anymore to fix that. Feel free to fork and fix the current problems or stop using it.**
 
 This extension add pep8 style guide check for python projects.
 
